@@ -1,0 +1,167 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - "/docs/download/_download.json"
+    - "/docs/download/_prerelease.json"
+    - "/_redirects"
+    - CNAME
+
+
+website:
+  title: "Ghassem Tofighi"
+  image: "images/dark-back.jpg"
+  favicon: "images/favicon.png"
+  google-analytics: "G-aaaaa"
+  open-graph: true
+  twitter-card: true
+  #site-path: "/web2/"
+  site-url: https://courses.ghassem.com/
+  repo-url: https://github.com/tofighi/web2
+  issue-url: https://github.com/tofighi/web2/issues/new/choose
+  repo-actions: [edit]
+  page-navigation: true
+  bread-crumbs: true
+  search:
+    show-item-context: true
+    type: overlay
+    
+  page-footer:
+    left: |
+      Proudly supported by
+      [![](https://sinamedialab.com/assets/img/logo@2x-black.png){fig-alt="Sina Media Lab" width=65px}](https://sinamedialab.com)
+    center:
+      - text: "About"
+        href: about.qmd
+      - text: "FAQ"
+        href: docs/faq/index.qmd
+      - text: "License"
+        href: license.qmd
+      - text: "Trademark"
+        href: trademark.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/tofighi
+        aria-label: Twitter
+      - icon: github
+        href: https://github.com/tofighi/
+        aria-label: GitHub       
+  navbar:
+    background: light
+    logo: images/favicon.png
+    logo-alt: "Ghassem Tofighi's logo."
+    title: false
+    collapse-below: lg
+    left:
+      - text: "About"
+        href: about.qmd
+      - text: "FAQ"
+        href: docs/faq/index.qmd
+      - text: "Ask a Question"
+        href: https://askdatascience.com
+      - text: "Help"
+        menu:
+          - text: "Report a Bug"
+            icon: "bug"
+            href: "https://github.com/tofighi/web2/issues"
+          - text: "Request a Feature"
+            icon: "lightbulb"
+            href: "#"
+
+    tools:
+      - icon: twitter
+        href: https://twitter.com/tofighi
+        text: Twitter
+      - icon: github
+        href: https://github.com/tofighi
+        text: GitHub 
+
+  sidebar:
+    - id: deep-learning
+      collapse-level: 3
+      contents:
+        - section: "Deep Learning"
+          href: docs/deep-learning/index.qmd
+          contents:
+          - section: Part 1
+            contents:
+              - docs/deep-learning/lesson1.qmd
+              - docs/deep-learning/lesson2.qmd
+              - docs/deep-learning/lesson3.qmd
+              - docs/deep-learning/lesson4.qmd
+              - docs/deep-learning/lesson5.qmd
+              - docs/deep-learning/lesson6.qmd
+              - docs/deep-learning/lesson7.qmd
+              - docs/deep-learning/lesson8.qmd
+              - docs/deep-learning/lesson8a.qmd
+              - section: Summaries
+                contents:
+                  - docs/deep-learning/Summaries/lesson1.qmd
+                  - docs/deep-learning/Summaries/lesson2.qmd
+                  - docs/deep-learning/Summaries/lesson3.qmd
+                  - docs/deep-learning/Summaries/lesson4.qmd
+                  - docs/deep-learning/Summaries/lesson5.qmd
+                  - docs/deep-learning/Summaries/lesson6.qmd
+                  - docs/deep-learning/Summaries/lesson7.qmd
+                  - docs/deep-learning/Summaries/lesson8.qmd
+          - text: "---"
+          - section: Part 2
+            contents:
+              - docs/deep-learning/part2.qmd
+              - docs/deep-learning/lesson9.qmd
+              - docs/deep-learning/lesson10.qmd
+              - docs/deep-learning/lesson11.qmd
+              - docs/deep-learning/lesson12.qmd
+              - docs/deep-learning/lesson13.qmd
+              - docs/deep-learning/lesson14.qmd
+              - docs/deep-learning/lesson15.qmd
+              - docs/deep-learning/lesson16.qmd
+              - docs/deep-learning/lesson17.qmd
+              - docs/deep-learning/lesson18.qmd
+              - docs/deep-learning/lesson19.qmd
+              - docs/deep-learning/lesson20.qmd
+              - docs/deep-learning/lesson21.qmd
+              - docs/deep-learning/lesson22.qmd
+              - docs/deep-learning/lesson23.qmd
+              - docs/deep-learning/lesson24.qmd
+              - docs/deep-learning/lesson25.qmd
+              - text: "Bonus: Lesson 9a"
+                href: https://youtu.be/0_BBRNYInx8
+              - text: "Bonus: Lesson 9b"
+                href: https://youtu.be/mYpjmM7O-30
+          - text: "---"
+          - section: Resources
+            contents:
+              - docs/deep-learning/Resources/book.qmd
+              - docs/deep-learning/Resources/forums.qmd
+              - docs/deep-learning/Resources/kaggle.qmd
+              - docs/deep-learning/Resources/testimonials.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    theme:
+      light: [cosmo, theme.scss]
+    code-copy: true
+    code-overflow: wrap
+    css: styles.css
+    include-after-body: js.html
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
+
+
+filters:
+  - filters/tools-tabset.lua
+
+
+freeze: true
+
+editor: visual
+
+profile:
+  group: 
+    - [prerelease,rc]
